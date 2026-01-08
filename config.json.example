@@ -1,0 +1,7 @@
+{
+  "account": "your-account",
+  "warehouse": "your-warehouse",
+  "database": "your-database",
+  "schema": "your-schema",
+  "token": "your-token-here"
+}
