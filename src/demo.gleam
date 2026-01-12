@@ -60,6 +60,7 @@ pub fn main() {
 
   // Send request and print response
   io.println("Sending request...")
+  io.println(json.to_string(body))
   let assert Ok(resp) = httpc.send(req)
   io.println("Status: " <> string.inspect(resp.status))
   io.println("Full response:\n" <> resp.body)
@@ -70,5 +71,5 @@ pub fn main() {
       resp.body,
       decode.at(["data"], decode.list(decode.list(decode.dynamic))),
     )
-  list.each(rows, fn(row) { io.println("\nRow: " <> string.inspect(row)) })
+  list.each(rows, fn(row) { io.println("Row: " <> string.inspect(row)) })
 }
